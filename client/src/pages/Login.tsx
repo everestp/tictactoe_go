@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Login = () => {
+
+    const navigate = useNavigate()
+    function JoinGame(){
+        navigate("/game")
+    }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
@@ -48,6 +54,7 @@ const Login = () => {
             className="flex-1 px-6 py-2 rounded-lg border border-blue-600 text-blue-600 font-medium
                        hover:bg-blue-50 active:scale-95
                        transition-all duration-200"
+                       onClick={JoinGame}
           >
             Join
           </button>
